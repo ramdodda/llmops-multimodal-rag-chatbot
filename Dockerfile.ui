@@ -1,0 +1,18 @@
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# UI-only dependencies: no PyMuPDF, Qdrant or Gemini SDK in this image.
+COPY requirements-ui.txt .
+RUN python -m pip install --upgrade pip \
+    && pip install -r requirements-ui.txt
+
+COPY ui.py .
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "ui.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.maxUploadSize=20"]

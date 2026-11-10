@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.env
+vertex-credentials.json
+**/vertex-credentials.json
+data
+*.db
+*.sqlite
+*.sqlite3

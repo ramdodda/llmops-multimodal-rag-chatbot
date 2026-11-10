@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+vertex-*.json
+data/
+.venv/
+__pycache__/
+*.backup
+*.bak
+*-backup
+*.before-fixes
+qdrant_backup.tar.gz
+evaluation/extracted_text.txt
