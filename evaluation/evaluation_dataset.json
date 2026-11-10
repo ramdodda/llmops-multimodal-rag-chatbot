@@ -1,12 +1,54 @@
 [
   {
-    "question": "Which vector database does this chatbot use?",
-    "ground_truth": "It uses Qdrant.",
-    "reference_context": "Qdrant collection: llmops_documents. The backend creates embeddings using the Gemini embedding model and stores the vectors in a Qdrant collection named llmops_documents."
+    "id": "vector-db",
+    "question": "Which database stores the embeddings?",
+    "ground_truth": "The embeddings are stored in Qdrant.",
+    "reference_context": "stores the vectors in a Qdrant collection named llmops_documents"
   },
   {
-    "question": "Which API framework does the backend use?",
-    "ground_truth": "It uses FastAPI.",
-    "reference_context": "The backend uses FastAPI to accept PDF and CSV files. It extracts text, splits the text into chunks, creates embeddings using the Gemini embedding model, and stores the vectors in a Qdrant collection named llmops_documents."
+    "id": "api-framework",
+    "question": "What web framework handles file uploads in the backend?",
+    "ground_truth": "FastAPI.",
+    "reference_context": "The backend uses FastAPI to accept PDF and CSV files."
+  },
+  {
+    "id": "collection-name",
+    "question": "What is the name of the vector collection?",
+    "ground_truth": "llmops_documents",
+    "reference_context": "Qdrant collection: llmops_documents"
+  },
+  {
+    "id": "vector-size",
+    "question": "How many dimensions do the embedding vectors have?",
+    "ground_truth": "768 dimensions.",
+    "reference_context": "Vector dimensions: 768"
+  },
+  {
+    "id": "embedding-model",
+    "question": "Which model is used to create the embeddings?",
+    "ground_truth": "The Gemini embedding model.",
+    "reference_context": "creates embeddings using the Gemini embedding model"
+  },
+  {
+    "id": "file-types",
+    "question": "Which file formats can be uploaded for indexing?",
+    "ground_truth": "PDF and CSV files.",
+    "reference_context": "The backend uses FastAPI to accept PDF and CSV files."
+  },
+  {
+    "id": "chunking",
+    "question": "What is done to the extracted text before embeddings are created?",
+    "ground_truth": "The text is split into chunks.",
+    "reference_context": "It extracts text, splits the text into chunks"
+  },
+  {
+    "id": "neg-cost",
+    "question": "What is the monthly cost of running this chatbot?",
+    "expect_not_found": true
+  },
+  {
+    "id": "neg-ceo",
+    "question": "Who is the CEO of the company that built this chatbot?",
+    "expect_not_found": true
   }
 ]

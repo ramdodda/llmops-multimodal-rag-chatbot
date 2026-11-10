@@ -11,3 +11,4 @@ __pycache__/
 *.before-fixes
 qdrant_backup.tar.gz
 evaluation/extracted_text.txt
+evaluation/results/
